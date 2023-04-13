@@ -16,7 +16,7 @@ def solution(x_success: int,
     n1 = x_cnt
     s2 = y_success
     n2 = y_cnt
-    stat, pval = proportion.proportions_ztest([s1, s2], [n1, n2], alternative='smaller')
+    stat, pval = proportion.proportions_ztest([s1, s2], [n1, n2], alternative='larger')
     #print('{0:0.19f}'.format(pval))
     return True if pval < 0.07 else False
    
